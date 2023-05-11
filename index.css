@@ -1,4 +1,3 @@
-
 :root {
     --primaryColor: #ff274b;
     --secondaryColor: #f7bcf7;
@@ -22,40 +21,43 @@ html {
     display: flex;
     flex-direction: column;
 }
-h1{
+
+h1 {
     font-size: 4.05rem;
     margin: 1.7rem 0;
 }
-h3{
+h3 {
     font-size: 1.5rem;
     margin-bottom: 3.5rem;
 }
-h4{
+h4 {
     font-size: 1.25rem;
     letter-spacing: 0.12rem;
     color: var(--secondaryColor);
 }
-h5{
+h5 {
     font-size: 1.37rem;
     margin-bottom: 1.5rem;
-    letter-spacing:2px ;
+    letter-spacing: 2px;
 }
 
 span {
     color: var(--primaryColor);
 }
-p{
+p {
     columns: var(--secondaryColor);
-    letter-spacing:1px ;
+    letter-spacing: 1px;
     line-height: 1.8rem;
     font-size: 1rem;
     color: var(--secondaryColor);
 }
- h2 {
+h2 {
     font-size: 2.2rem;
     letter-spacing: 0.12rem;
     cursor: pointer;
 }
+
+/* ---------------------------------------start ----- */
 .start nav {
     padding-top: 2.8rem;
     padding-left: var(--padding);
@@ -74,60 +76,63 @@ p{
     text-decoration: none;
     color: var(--lightColor);
 }
-.start nav ul li a:hover{
-  color: var(--primaryColor);
+.start nav ul li a:hover {
+    color: var(--primaryColor);
 }
 
-.btn{
+.btn {
     background-color: var(--primaryColor);
     color: var(--lightColor);
     text-decoration: none;
     font-weight: bold;
     padding: 0.81rem 1.87rem;
     border-radius: 30px;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     /* hier weil die andere element bewegt bei hover */
 }
-.btn:hover{
+.btn:hover {
     background-color: transparent;
-    border: 2px solid  var(--primaryColor);
-
-
+    border: 2px solid var(--primaryColor);
 }
-.content{
+
+/* ------------ ---------------------content----- */
+.content {
     flex-grow: 1;
     padding: 0 var(--padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.container-text{
+.container-text {
     position: relative;
     bottom: 70px;
 }
 
-.social{
+/* --------------------------------social------ */
+
+.social {
     margin-top: 3.5rem;
 }
-.social img{
+.social img {
     margin-right: 2rem;
     width: 2.5rem;
     transition: 0.4s;
 }
-.social img:hover{
+.social img:hover {
     transform: scale(1.3);
-
 }
-.start .container-images img{
+.start .container-images img {
     border-radius: 50%;
     width: 200px;
     margin-bottom: 150px;
-    transition: margin-bottom 1s ;
+    transition: margin-bottom 1s;
 }
 
-.start .container-images:hover img{
- margin-bottom: 50px;
+.start .container-images:hover img {
+    margin-bottom: 50px;
 }
+
+/* -------------------------------------about ---- */
 .about {
     width: 100%;
     background-color: var(--bgColor-2);
@@ -136,79 +141,170 @@ p{
     align-items: center;
     justify-content: space-around;
 }
-.about .container-images{
+.about .container-images {
     width: 35%;
 }
-.about .container-images img{
+.about .container-images img {
     width: 90%;
 }
-.about .container-texts{
+.about .container-texts {
     width: 35%;
 }
-.services{
+
+/* ------------------------------services------- */
+.services {
     background-color: var(--bgColor-1);
     padding: 2rem var(--padding);
 }
-.text-center{
+.text-center {
     text-align: center;
 }
-.box{
+.box {
     display: flex;
-justify-content: space-between;}
-.card{
+    justify-content: space-between;
+    gap: 30px;
+}
+.card {
     background-color: var(--bgColor-2);
     border-radius: 20px;
     padding: 1.3rem 2rem;
     text-align: center;
 }
-.card em{
+.card em {
     font-size: 3.12rem;
     text-align: center;
     color: var(--primaryColor);
     margin: 2rem;
 }
 
-  @media only screen and (max-width: 480px) {
-    nav{
-        
-        display: flex;
-        flex-direction: column;
+/* -----------------------------skills------ */
+.skills {
+    width: 100%;
+    background-color: var(--bgColor-2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .container-images {
+    width: 35%;
+}
+.skills .container-images img {
+    width: 90%;
+}
+.skills .container-skills {
+    width: 50%;
+}
+.content-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+.skill {
+    width: 100px;
+    height: 100px;
+    background-color: var(--lightColor);
+    border-radius: 50%;
+    margin: 0 2rem 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill img {
+    width: 70%;
+}
+
+/* ---------------------------------footer------- */
+footer {
+    padding: 2rem var(--padding);
+    background-color: var(--bgColor-1);
+}
+footer .content-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .content-footer p {
+    color: var(--lightColor);
+    text-align: center;
+    margin-top: 1rem;
+}
+footer .content-footer h2{
+    color: var(--primaryColor);
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 700px) {
+    :root {
+        --padding: 1.5rem;
     }
-    .content{
-        display: flex;
-        flex-direction: column;
+
+    .start nav {
+        margin-bottom: 100px;
     }
-    h1{
-        font-size: 1.05rem;
+    nav h2 {
+        font-size: 2rem;
         margin: 0.7rem 0;
     }
-    h3{
-        font-size: 0.5rem;
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .start nav ul li {
+        display: inline-block;
+        margin: 0.3rem 0.2rem;
+    }
+    nav .btn{
+        margin-top: 30px;
+        }
+        .btn{
+            font-size: 15px;
+
+        }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 1.9rem;
+        margin: 0.7rem 0;
+    }
+    h3 {
+        font-size: 0.9rem;
         margin-bottom: 3.5rem;
     }
-    h4{
-        font-size: 1.25rem;
+    h4 {
+        font-size: 0.9rem;
         letter-spacing: 0.12rem;
         color: var(--secondaryColor);
     }
-    h5{
+    h5 {
         font-size: 1.37rem;
         margin-bottom: 1.5rem;
-        letter-spacing:2px ;
+        letter-spacing: 2px;
     }
-    
+    h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.12rem;
+        cursor: pointer;
+    }
     span {
         color: var(--primaryColor);
     }
-    p{
+    p {
         columns: var(--secondaryColor);
-        letter-spacing:1px ;
+        letter-spacing: 1px;
         line-height: 0.8rem;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         color: var(--secondaryColor);
     }
-    .box{
+    .box {
         display: flex;
         flex-direction: column;
+    }
+    footer {
     }
 }
